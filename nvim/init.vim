@@ -1,8 +1,6 @@
-
 " vimconfig保存後、reload
 autocmd! bufwritepost $MYVIMRC source %
 " autocmd! bufwritepost $MYVIMRC echo 'reload vimconfig'
-
 set encoding=utf-8
 set shell=/bin/zsh
 set shiftwidth=2
@@ -19,7 +17,7 @@ syntax on
 set list listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%,space:_ "タブや改行文字、末尾の半角スペースなど、通常は非表示の文字を表示する
 set helplang=ja,en
 set autoread "ファイルが他で変更されている場合に自動的に読み直します
-
+"aaaaaaあああああああああああああああaaa 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes " 行番号の更に左に目印桁を表示します
@@ -34,6 +32,7 @@ set updatetime=300
 set nobackup
 set nowritebackup
 
+set history=200
 " set conceallevel=0
 " hi link HelpBar Normal
 " hi link HelpStar Normal
@@ -93,7 +92,10 @@ Plug 'jparise/vim-graphql'
 " svelte syntax highlight plugin
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'tpope/vim-commentary'
+Plug 'ryofu1210/vim-im-select'
 call plug#end()
+
+let g:im_select_default = 'com.google.inputmethod.Japanese.Roman'
 
 " tablineを表示する。tablineってどこのこと？
 let g:airline#extensions#tabline#enabled = 1
@@ -112,15 +114,12 @@ nnoremap [ff]     <Nop>
 xnoremap [ff]     <Nop>
 nmap     z        [ff]
 xmap     z        [ff]
-inoremap <silent> <C-[> <ESC>
-inoremap <silent> jj <ESC>
-inoremap <silent> っｊ <ESC>
-" nnoremap [lsp] <Nop>
-" nmap l [lsp]
+" inoremap <silent> jj <ESC>
+" inoremap <silent> っj <ESC>
 
 "" 単語を{}で囲う
 nmap \p i{<ESC>ea}<ESC>
-"
+"aaaあああああああいいaaaあああaaaaaaああああ
 "" 設定ファイル再読み込み
 " :source $MYVIMRC
 " reloadしたいがうまくいかない
@@ -187,7 +186,7 @@ nnoremap <C-k> {
 
 
 "" coc.nvim
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint8', 'coc-prettier', 'coc-git', 'coc-fzf-preview', 'coc-lists', 'coc-prisma', 'coc-graphql', 'coc-svelte']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint8', 'coc-prettier', 'coc-git', 'coc-fzf-preview', 'coc-lists', 'coc-prisma', 'coc-svelte']
 
 """ coc-nvimの設定は公式のExample vim configurationを参考 https://github.com/neoclide/coc.nvim
 
