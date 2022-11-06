@@ -93,6 +93,9 @@ Plug 'jparise/vim-graphql'
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'tpope/vim-commentary'
 Plug 'ryofu1210/vim-im-select'
+
+" jsonのcommentでエラーがでないように
+Plug 'kevinoid/vim-jsonc'
 call plug#end()
 
 let g:im_select_default = 'com.google.inputmethod.Japanese.Roman'
